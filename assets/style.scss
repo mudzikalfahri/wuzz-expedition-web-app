@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    width:1240px;
+    margin: auto;
+    height: 600px;
+    position: relative;
+}
+
+nav{
+    width:1240px;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 64px;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: fixed;
+    z-index: 10;
+}
+
+.logo{
+    margin-left:10%;
+}
+
+.nav-link ul{
+    display: flex;
+    justify-content:center;
+}
+
+.nav-link ul li{
+    display:inline-block;
+    list-style: none;
+    padding-left:50px;
+}
+
+.nav-link ul li a{
+    text-decoration: none;
+    color:#000;
+    font-size: 14px;
+}
+
+.nav-link ul li::after{
+    content: '';
+    width:0%;
+    height: 2px;
+    background: #04009A;
+    margin: auto;
+    display: block;
+    transition: 0.7s;
+}
+
+.nav-link ul li:hover::after{
+    width: 100%;
+}
+
+button.lang{
+    background-color: #FFFEFE;
+    color:#868484;
+    border: none;
+    border-radius: 20px;
+    margin-right:10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height:35px;
+    width:120px;
+    cursor: pointer;
+}
+
+button.lang img{
+    padding-left: 5px;
+    padding-right:5px;
+}
+
+.hero{  
+    width: 100%;
+}
+
+.hero-image{
+    position: absolute;
+    right:0;
+    top:0;
+    z-index:-5;
+}
+
+.hero-image-main{
+    padding-top:140px;
+    position: relative;
+    animation-name: show-up;
+    animation-duration: 1.5s;
+    z-index: -1;
+}
+
+@keyframes show-up{
+    0%{right: 200px; opacity: 0.2;}
+    100%{right: 0px;}
+}
+
+.hero-image-secondary{
+    position: absolute;
+    right:0;
+    top:0;
+    z-index: -2;
+}
+
+.hero-heading{
+    width:430px;
+    margin-left:10%;
+    padding-top: 150px;
+    animation-name: showtext;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+}
+
+.text-heading {
+    font-size: 40px;
+    line-height: 55px;
+}
+
+.description-text{
+    font-size: 14px;
+    line-height: 27px;
+    margin-top:15px;
+    
+}
+
+@keyframes showtext{
+    0%{opacity: 0;}
+    50%{opacity: 0.5;}
+    100%{opacity: 1;}
+}
+
+button.btn-primary{
+    background-color: #04009A;
+    color:#fff;
+    border-radius: 20px;
+    border:none;
+    width:120px;
+    height: 35px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top:20px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    margin-right:10px;
+}
+
+button.btn-secondary{
+    background-color: transparent;
+    color:rgba(119, 172, 241, 1);
+    border-radius: 20px;
+    border:1px solid rgba(119, 172, 241, 1);
+    width:120px;
+    height: 35px;
+    font-weight:300;
+    cursor: pointer;
+    margin-top:20px;
+}
+
+.section-benefit{
+    width :1240px;
+    height: 550px; 
+    margin: 70px auto;
+    background-image: url(./img/Subtract.jpg);
+    background-size: cover;
+}
+
+h6.small-title{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: #868484;
+}
+
+h3.medium-title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    padding:8px;
+}
+
+.benefit-card{
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+}
+
+.card{
+    width: 25%;
+    height: 320px;
+    margin: auto;
+    border-radius: 30px;
+    background: #fff;
+    transition: 0.5s;
+    box-shadow: 3px 3px 3px 2px rgba(161, 161, 161, 0.10);
+}
+
+.card:hover{
+    background-color: #04009A;
+    border: 1px solid #04009A;
+    color: white;
+}
+
+.title-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.des-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.img-card{
+    widows: 100%;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.section-info{
+    width:1240px;
+    height: 500px;
+    margin: auto;
+}
+
+.bg-motor{
+    position: absolute;
+    left:0%;
+    top:0%;
+    z-index: -2;
+}
+
+.img-motor{
+    margin-left: 10%;
+    margin-top: 30px;
+}
+
+.semi-title{
+    padding: 10px;
+    text-align: center;
+    display: block;
+    font-size: 30px;
+}
+.info-content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.section-info h2{
+    font-weight: 500;
+}
+
+.info-text {
+    text-align: right;
+    margin-right: 10%;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+
+.track-container{
+    width: 1240px;
+    height: 500px;
+    margin: auto;
+}
+
+.image-background{
+    width:100%;
+    position: relative;
+    height: 400px;
+    background-image: url(./img/Courier_Freight\ 1.jpg);
+    background-size: cover;
+    margin: auto;
+}
+
+.mask-background{
+    background-color: #04009A;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0.7;
+}
+
+.track-content{
+    position: relative;
+    bottom: 370px;
+}
+
+.track-content h6{
+    color: white;
+}
+
+.track-content h3{
+    color: white;
+}
+
+.track-content .input-text{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.track-content input{
+    display: block;
+    width: 700px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.track-content input:focus{
+    outline: none;
+}
+
+.track-content .track-button{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.track-content .btn-primary{
+    background: white;
+    color: black;
+    transition: 0.5s;
+}
+
+.track-content .btn-primary:hover{
+    background: #04009A;
+    color: white;
+}
+
+
+
+
