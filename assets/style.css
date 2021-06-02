@@ -6,21 +6,26 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container{
-    width:1240px;
+    width:1280px;
     margin: auto;
     height: 600px;
     position: relative;
+    background-image: linear-gradient(180deg, rgba(9, 116, 255, 0.15), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)    );
 }
 
 nav{
-    width:1240px;
+    width:1280px;
     margin: auto;
     display: flex;
     justify-content:space-between;
     align-items: center;
     height: 64px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0);
     position: fixed;
     z-index: 10;
 }
@@ -64,7 +69,7 @@ button.lang{
     background-color: #FFFEFE;
     color:#868484;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-right:10%;
     display: flex;
     align-items: center;
@@ -85,17 +90,18 @@ button.lang img{
 
 .hero-image{
     position: absolute;
-    right:0;
+    right:10%;
     top:0;
-    z-index:-5;
+    z-index:0;
 }
 
 .hero-image-main{
-    padding-top:140px;
+    padding-top:100px;
+    margin: 0;
     position: relative;
     animation-name: show-up;
     animation-duration: 1.5s;
-    z-index: -1;
+    z-index: 1;
 }
 
 @keyframes show-up{
@@ -105,9 +111,10 @@ button.lang img{
 
 .hero-image-secondary{
     position: absolute;
+    opacity: 0.5;
     right:0;
-    top:0;
-    z-index: -2;
+    top:130px;
+    z-index: 0;
 }
 
 .hero-heading{
@@ -138,23 +145,23 @@ button.lang img{
 }
 
 button.btn-primary{
-    background-color: #04009A;
+    background-image: linear-gradient(180deg, rgba(4, 0, 154, 1), rgba(6, 0, 214, 0.8));
     color:#fff;
-    border-radius: 20px;
+    border-radius: 10px;
     border:none;
     width:120px;
     height: 35px;
     font-weight: 500;
     cursor: pointer;
     margin-top:20px;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 30px 40px rgba(119, 172, 241, 0.2);
     margin-right:10px;
 }
 
 button.btn-secondary{
     background-color: transparent;
     color:rgba(119, 172, 241, 1);
-    border-radius: 20px;
+    border-radius: 10px;
     border:1px solid rgba(119, 172, 241, 1);
     width:120px;
     height: 35px;
@@ -166,8 +173,9 @@ button.btn-secondary{
 .section-benefit{
     width :1240px;
     height: 550px; 
-    margin: 70px auto;
-    background-image: url(./img/Subtract.jpg);
+    margin: auto;
+    margin-bottom: 70px;
+    margin-top: 50px;
     background-size: cover;
 }
 
@@ -182,6 +190,7 @@ h6.small-title{
 h3.medium-title{
     text-align: center;
     font-size: 24px;
+    color: black;
     font-weight: 500;
     padding:8px;
 }
@@ -198,15 +207,15 @@ h3.medium-title{
 .card{
     width: 25%;
     height: 320px;
-    margin: auto;
-    border-radius: 30px;
-    background: #fff;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #fff;
     transition: 0.5s;
-    box-shadow: 3px 3px 3px 2px rgba(161, 161, 161, 0.10);
+    box-shadow: 20px 20px 50px 10px rgba(161, 161, 161, 0.15);
 }
 
 .card:hover{
-    background-color: #04009A;
+    background-image: linear-gradient(180deg, rgba(4, 0, 154, 1), rgba(6, 0, 214, 0.8));
     border: 1px solid #04009A;
     color: white;
 }
@@ -236,12 +245,6 @@ h3.medium-title{
     justify-content: center;
 }
 
-.section-info{
-    width:1240px;
-    height: 500px;
-    margin: auto;
-}
-
 .bg-motor{
     position: absolute;
     left:0%;
@@ -260,24 +263,6 @@ h3.medium-title{
     display: block;
     font-size: 30px;
 }
-.info-content{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-}
-
-.section-info h2{
-    font-weight: 500;
-}
-
-.info-text {
-    text-align: right;
-    margin-right: 10%;
-    margin-top: 40px;
-    font-size: 14px;
-}
-
 
 .track-container{
     width: 1240px;
