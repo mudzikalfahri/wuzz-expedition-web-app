@@ -22,12 +22,17 @@ nav{
     width:1280px;
     margin: auto;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     height: 64px;
     background-color: rgba(255, 255, 255, 0);
     position: fixed;
     z-index: 10;
+    transition: 0.5s;
+}
+
+.white-nav{
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .logo{
