@@ -11,15 +11,16 @@ html {
 }
 
 .container{
-    width:1280px;
+    display: flex;
+    justify-content: center;
     margin: auto;
-    height: 600px;
+    min-height: 100vh;   
     position: relative;
-    background-image: linear-gradient(180deg, rgba(9, 116, 255, 0.15), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)    );
+    background-image: linear-gradient(180deg, rgba(9, 116, 255, 0.15), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
 }
 
 nav{
-    width:1280px;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -40,6 +41,7 @@ nav{
 }
 
 .nav-link ul{
+    text-align: center;
     display: flex;
     justify-content:center;
 }
@@ -55,7 +57,11 @@ nav{
     color:#000;
     font-size: 14px;
 }
-
+.close{
+    position: absolute;
+    display: none;
+    visibility: hidden;
+}
 .nav-link ul li::after{
     content: '';
     width:0%;
@@ -76,6 +82,7 @@ button.lang{
     border: none;
     border-radius: 10px;
     margin-right:10%;
+    margin-left: 20px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -87,6 +94,11 @@ button.lang{
 button.lang img{
     padding-left: 5px;
     padding-right:5px;
+}
+
+.burger{
+    visibility: hidden;
+    display: none;
 }
 
 .hero{  
@@ -176,12 +188,10 @@ button.btn-secondary{
 }
 
 .section-benefit{
-    width :1240px;
-    height: 550px; 
+
     margin: auto;
     margin-bottom: 70px;
     margin-top: 50px;
-    background-size: cover;
 }
 
 h6.small-title{
@@ -202,7 +212,6 @@ h3.medium-title{
 
 .benefit-card{
     width: 80%;
-    height: 400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
@@ -210,18 +219,17 @@ h3.medium-title{
 }
 
 .card{
-    width: 25%;
+    width: 250px;
     height: 320px;
-    margin: 0 auto;
+    margin: 20px auto;
     border-radius: 20px;
     background-color: #fff;
-    transition: 0.5s;
+    transition: 0.5s all;
     box-shadow: 20px 20px 50px 10px rgba(161, 161, 161, 0.15);
 }
 
 .card:hover{
     background-image: linear-gradient(180deg, rgba(4, 0, 154, 1), rgba(6, 0, 214, 0.8));
-    border: 1px solid #04009A;
     color: white;
 }
 
@@ -270,7 +278,7 @@ h3.medium-title{
 }
 
 .track-container{
-    width: 1240px;
+ 
     height: 500px;
     margin: auto;
 }
@@ -285,7 +293,7 @@ h3.medium-title{
 }
 
 .mask-background{
-    background-color: #04009A;
+    background-image: linear-gradient(180deg, rgba(4, 0, 154, 1), rgba(6, 0, 214, 0.7));
     width: 100%;
     height: 400px;
     position: absolute;
@@ -318,7 +326,7 @@ h3.medium-title{
     display: block;
     width: 700px;
     height: 50px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     text-align: left;
     padding-left: 20px;
@@ -337,7 +345,7 @@ h3.medium-title{
 
 .track-content .btn-primary{
     background: white;
-    color: black;
+    color: #868484;
     transition: 0.5s;
 }
 
@@ -346,6 +354,116 @@ h3.medium-title{
     color: white;
 }
 
+.about {
+ 
+    margin: auto;
+    align-items: center;
+}
+
+.about-text{
+    width: 60%;
+    color: #868484;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 14px;
+}
+
+.sosmed{
+    display: flex;  
+    justify-content: center;
+    color:#868484 ;
+}
+
+i{
+    margin: 0px 15px;
+}
+
+p.made{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #868484;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+@media (max-width:840px){
+    .hero-heading{
+        width: 80%;
+        text-align: center;
+        margin-top: 35px;
+    }
+    .nav-link ul li{
+        text-align: center;
+        margin: auto;
+    }
+    .hero-image{
+        visibility: hidden;
+    }
+    .benefit-card{
+        display: block;
+    }
+    .card{
+        width: 100%;
+    }
+    .title-card{
+        padding-top: 40px;
+    }
+    .track-content input{
+        width: 80%;
+    }
+    .close{
+        visibility: hidden;
+    }
+    .burger{
+        visibility: hidden;
+        
+    }
+}
+
+@media (max-width:730px){
+    .burger{
+        visibility: visible;
+        display: block;
+        margin: 10px;
+        margin-right: 10%;
+    }
+    .nav-link ul li{
+        margin: 20px;
+        padding-left: 0;
+        display: block;
+    }
+    .nav-link{
+        position: absolute;
+        z-index: 10;
+        min-height: 100vh;
+        background-color: white;
+        top: 0;
+        right: -200px;
+        text-align: center;
+        width: 200px;
+        transition: 0.5s;
+        
+    }
+    .nav-link ul{
+        display: block;
+    }
+    button.lang{
+        display: none;
+    }
+    .close{
+        position:relative;
+        visibility: visible;
+        cursor: pointer;
+        display: block;
+        margin: 20px;
+        width: 80%;
+        color: #04009A;
+        text-align: left;
+    }
+    
+}
 
 
 

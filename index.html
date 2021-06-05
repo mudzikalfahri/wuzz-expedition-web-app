@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel = "icon" href = "./assets/img/Wuzz.svg" type = "image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <section id="home" class="container">
@@ -12,12 +13,13 @@
             <div class="logo">
                 <img src="./assets/img/Wuzz.svg" alt="">
             </div>
-            <div class="nav-link">
+            <div class="nav-link" id="nav-link">
+                <i class="fa fa-times close" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#benefit">Benefit</a></li>
                     <li><a href="#track">Track</a></li>
-                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#about">About</a></li>
                 </ul>
             </div>
             <button class="lang">
@@ -25,6 +27,7 @@
                 Indonesia
                 <img src="./assets/img/arrow-down-sign-to-navigate 1.svg" alt="">
             </button>
+            <a href="#" class="burger" id="burger" onclick="showMenu()"><img src="./assets/img/burger.svg" alt="" ></a>
         </nav>
 
         <div class="hero">
@@ -114,6 +117,24 @@
                 <button class="btn-primary">Track</button>
             </div>
         </div>
+    </section>
+
+    <section class="about" id="about">
+        <h6 class="small-title">
+            About Us
+        </h6>
+        <p class="about-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac elit tellus. Etiam fermentum hendrerit ante id volutpat. Curabitur hendrerit tincidunt mi, in tempor sapien hendrerit at. Ut hendrerit et nisl interdum consequat.
+        </p>
+        <div class="sosmed">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p class="made">
+            Made with <i class="fa fa-heart"></i> by mudzikal</i>
+        </p>
     </section>
     <script src="./script.js"></script>
 </body>
